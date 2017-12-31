@@ -1,0 +1,283 @@
+html {
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+}
+
+header, footer {
+    color: white;
+}
+
+header {
+    background-color: cadetblue;
+}
+
+header .container {
+    padding-top: 1rem;
+}
+
+footer {
+    background-color: azure;
+}
+
+.container {
+    padding-left: 4rem;
+    width: 960px;
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo img {
+    height: 1.5rem;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.logo span {
+    font-size: 1rem;
+}
+
+.banner {
+    background-image: url("../images/glasses-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 30rem;
+}
+
+nav {
+    padding: 1rem 2rem;
+    color: white;
+    width: 100%
+}
+
+nav .container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.motto {
+    background-color: white;
+    color: white;
+    align-items: right;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 20rem;
+    margin-top: 9rem;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.service {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 4px black;
+    background-color: white;
+    width: 30%;
+}
+
+.service img {
+    align-self: center;
+    max-width: 50%;
+    height: auto;
+}
+
+.service .container {
+    display: flex;
+    height: 9rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: initial;
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.service .service-title {
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    align-self: baseline;
+    text-align: center;
+}
+
+.philosophy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+}
+
+.philosophy, .hours {
+    display: inline-flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.philosophy .title, .hours .title {
+    background-color: black;
+    color: white;
+    padding: 1rem 0 1rem 2rem;
+}
+
+.info-item {
+    text-align: left;
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    color: white;
+    background-color: black;
+}
+
+footer .container {
+    display: inline-flex;
+    align-content: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+}
+
+
+footer span {
+    display: flex;
+    text-align: left;
+}
+
+@media only screen and (min-width: 1025px) {
+
+    nav .mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .featured .featured-item {
+        font-size: 2em;
+        line-height: 1.2rem;
+        margin: 0.25rem 0;
+    }
+
+    nav .desktop {
+        display: none;
+    }
+
+
+    nav .container {
+        justify-content: center;
+    }
+
+    .services {
+        justify-content: space-around;
+    }
+
+
+    .service {
+        max-width: 47%;
+    }
+
+    /* Only show two services on a tablet */
+    .service:last-of-type {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 470px) {
+
+
+    .container {
+        padding-left: 0;
+        max-width: 470px;
+    }
+
+    /* Only display logo (no text) and move it to the center */
+
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        padding-bottom: .5rem;
+        padding-top: .5rem;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    .banner .container {
+        padding-top: 20rem;
+        height: 10rem;
+        width: 100%;
+        align-items: baseline;
+    }
+
+    /* Change position and font parameters of service highlight */
+
+    .featured {
+        padding: 1rem 0 .5rem 2rem;
+        width: 100%;
+        margin-top: unset;
+        justify-content: flex-end;
+    }
+
+    .featured .highlight {
+        font-size: .77rem;
+    }
+
+    .featured .featured-item {
+        font-size: 1rem;
+    }
+
+    nav {
+        margin-top: 3.4rem;
+    }
+    /* Product should take up most of the screen */
+
+    .services {
+        justify-content: center;
+    }
+
+    .service:first-child {
+        width: 90%;
+    }
+
+    /* Only show one service on a phone, so hide the 2nd and following services */
+    .service:nth-child(n+2) {
+        display: none;
+    }
+
+    /* Store info moves to column on a phone */
+
+    .store-info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .philosophy {
+        padding-bottom: .5rem;
+    }
+
+    footer .container {
+        justify-content: center;
+        text-align: center;
+    }
+}
