@@ -1,23 +1,8 @@
 html {
     font-size: 18px;
+    line-height: 1.4;
     font-family: Helvetica, sans-serif;
     width: 100%;
-}
-
-header, footer {
-    color: white;
-}
-
-header {
-    background-color: cadetblue;
-}
-
-header .container {
-    padding-top: 1rem;
-}
-
-footer {
-    background-color: azure;
 }
 
 .container {
@@ -25,8 +10,36 @@ footer {
     width: 960px;
 }
 
+header {
+    color: white;
+    background-image: url("../images/glasses-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+}
+
+header .container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 1rem;
+    width: 960px;
+}
+
+.top-row {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cadetblue;
+    margin-bottom: 10rem;
+    width: inherit;
+}
+
 .logo {
     display: inline-flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
@@ -40,123 +53,128 @@ footer {
     font-size: 1rem;
 }
 
-.banner {
-    background-image: url("../images/glasses-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: auto;
-    height: 30rem;
-}
-
 nav {
-    padding: 1rem 2rem;
+    padding: 1rem 0 1rem 0;
     color: white;
-    width: 100%
-}
-
-nav .container {
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    width: 100%;
+}
+
+nav span {
+    padding-right: 2rem;
+}
+
+.second-row {
+    margin-right: -2rem;
+    background-color: white;
+    width: fit-content;
+    text-transform:uppercase;
 }
 
 .motto {
-    background-color: white;
-    color: white;
-    align-items: right;
+    color: black;
+    align-items: center;
     font-weight: bold;
     font-size: 2rem;
-    width: 20rem;
-    margin-top: 9rem;
+    line-height: 1.2;
+    padding: 1.5rem 5rem;
 }
 
 .services {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    height: 8rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
 
-.service {
+.service .container {
     display: inline-flex;
     flex-direction: column;
-    justify-content: space-between;
-    border: solid 4px black;
-    background-color: white;
-    width: 30%;
-}
-
-.service img {
-    align-self: center;
-    max-width: 50%;
-    height: auto;
-}
-
-.service .container {
-    display: flex;
-    height: 9rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    width: initial;
-    padding-left: 0;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
+    background-color: white;
+    width: 5rem;
 }
 
-.service .service-title {
-    color: white;
-    background-color: black;
-    width: 100%;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    align-self: baseline;
+.service-title {
+    color: black;
     text-align: center;
 }
 
-.philosophy {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-bottom: 4rem;
+.service .paper {
+    width: 3.5rem;
 }
 
-.philosophy, .hours {
+.service .ruler {
+    width: 5rem;
+}
+
+.service .truck {
+    width: 5rem;
+}
+
+.info-container {
     display: inline-flex;
-    flex-direction: column;
-    width: 35%;
-}
-
-.philosophy .title, .hours .title {
-    background-color: black;
-    color: white;
-    padding: 1rem 0 1rem 2rem;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .info-item {
+    display: inline-flex;
+    flex-direction: column;
     text-align: left;
+    width: 35%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
+
+.info-header {
+    background-color: cadetblue;
+    width: 10rem;
+    text-align: left;
+    padding: 0.5rem 0 0.5rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.info-header .title {
+    color: white;
+    font-weight: bold;
+}
+
+.info-detail {
+    color: black;
+}
+
 
 footer {
     width: 100%;
-    height: 5rem;
-    color: white;
-    background-color: black;
+    height: 9.5rem;
+    margin-top: 5rem;
+    color: black;
+    background-color: azure;
 }
 
 footer .container {
     display: inline-flex;
+    width: 960px;
     align-content: center;
     justify-content: flex-start;
-    padding-top: 2rem;
+    padding: 4rem 0 4rem 4rem;
 }
 
+footer img {
+    height: 1.5rem;
+    padding-right: 1rem;
+}
 
 footer span {
     display: flex;
     text-align: left;
+    color: black;
 }
 
 @media only screen and (min-width: 1025px) {
