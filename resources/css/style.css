@@ -164,7 +164,7 @@ footer {
 footer .container {
     display: inline-flex;
     width: 960px;
-    align-content: center;
+    align-items: center;
     justify-content: flex-start;
     padding: 4rem 0 4rem 4rem;
 }
@@ -180,125 +180,143 @@ footer span {
     color: black;
 }
 
-@media only screen and (min-width: 1025px) {
+/* Hide mobile nav menu except on mobile */
+
+@media only screen and (min-width: 471px) {
 
     nav .mobile {
         display: none;
     }
 }
 
+/* Tablet settings */
+
 @media only screen and (max-width: 1024px) {
 
-    .featured .featured-item {
-        font-size: 2em;
-        line-height: 1.2rem;
-        margin: 0.25rem 0;
+
+    /* Snap header to top for tablet, mobile, plus full width for mobile */
+
+    .container {
+        padding-left: 0;
+        width: unset;
     }
 
-    nav .desktop {
-        display: none;
+    header .container {
+        padding-top: 0;
+        width: 100%;
     }
 
-
-    nav .container {
-        justify-content: center;
+    footer .container {
+        width: 100%;
     }
 
-    .services {
-        justify-content: space-around;
+    header {
+        height: 22rem;
+        background-position: 35%;
     }
 
+    /* Change placement, sizing of motto relative to background graphics */
 
-    .service {
-        max-width: 47%;
+    .top-row {
+        margin-bottom: 5rem;
     }
 
-    /* Only show two services on a tablet */
-    .service:last-of-type {
-        display: none;
+    .second-row {
+        margin-right: 2rem;
     }
+
+    .motto {
+        font-size: 1.33rem;
+        padding: .75rem 4rem;
+    }
+
 }
 
 /* Mobile */
 @media only screen and (max-width: 470px) {
 
+    /* Hide regular nav on mobile */
 
-    .container {
-        padding-left: 0;
-        max-width: 470px;
+    nav .desktop {
+        display: none;
     }
 
-    /* Only display logo (no text) and move it to the center */
-
-
-    .logo {
-        display: flex;
-        justify-content: center;
-        padding-bottom: .5rem;
-        padding-top: .5rem;
-    }
+    /* Only display logo (no text) for header on mobile */
 
     .logo span {
         display: none;
     }
 
-    .banner .container {
-        padding-top: 20rem;
-        height: 10rem;
+    header {
+        height: 17rem;
+        background-position: 20%;
+    }
+
+    .top-row {
+        margin-bottom: 9rem;
+    }
+
+    /* Motto spans full width */
+
+    .second-row {
+        margin-right: 0;
         width: 100%;
-        align-items: baseline;
     }
 
-    /* Change position and font parameters of service highlight */
-
-    .featured {
-        padding: 1rem 0 .5rem 2rem;
-        width: 100%;
-        margin-top: unset;
-        justify-content: flex-end;
-    }
-
-    .featured .highlight {
-        font-size: .77rem;
-    }
-
-    .featured .featured-item {
+    .motto {
         font-size: 1rem;
+        padding: 1rem 0;
+        text-align: center;
     }
 
-    nav {
-        margin-top: 3.4rem;
-    }
-    /* Product should take up most of the screen */
+    /* Rest of page stacks vertically */
 
     .services {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding-top: 3.77rem;
+        padding-bottom: 3.77rem;
+    }
+
+    .service-title {
+        font-size: 0.77rem;
+        text-align: center;
+    }
+
+
+    .info-container {
+        display: inline-flex;
+        flex-direction: column;
         justify-content: center;
     }
 
-    .service:first-child {
-        width: 90%;
+    .info-header {
+        background-color: cadetblue;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0 0.5rem 1.25rem;
+        margin-bottom: 1rem;
     }
 
-    /* Only show one service on a phone, so hide the 2nd and following services */
-    .service:nth-child(n+2) {
-        display: none;
+    .info-item {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 0.77rem;
+        margin-bottom: 4rem;
     }
 
-    /* Store info moves to column on a phone */
-
-    .store-info {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        width: 90%;
-    }
-
-    .philosophy {
-        padding-bottom: .5rem;
-    }
+    /* Only display footer logo on phones, and center the logo */
 
     footer .container {
         justify-content: center;
-        text-align: center;
+        padding-left: 0;
+    }
+
+    footer span {
+        display: none;
     }
 }
