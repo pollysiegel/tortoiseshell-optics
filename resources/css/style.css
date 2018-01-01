@@ -86,6 +86,7 @@ nav span {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: baseline;
     height: 8rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -94,15 +95,17 @@ nav span {
 .service .container {
     display: inline-flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     background-color: white;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     width: 5rem;
 }
 
 .service-title {
     color: black;
     text-align: center;
+    margin-top: 1.5rem;
 }
 
 .service .paper {
